@@ -1,0 +1,17 @@
+package com.jarvis.springbootkafka.service;
+
+```xml
+<dependency>
+  <groupId>org.junit.jupiter</groupId>
+  <artifactId>junit-jupiter-api</artifactId>
+  <version>5.9.1</version>
+  <scope>test</scope>
+</dependency>
+
+<dependency>
+  <groupId>org.mockito</groupId>
+  <artifactId>mockito-core</artifactId>
+  <version>4.7.0</version>
+  <scope>test</scope>
+</dependency> 
+```
