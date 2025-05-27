@@ -5,7 +5,7 @@ import org.springframework.kafka.annotation.KafkaListener;
 import org.springframework.stereotype.Service;
 
 @Service
-public class KafkaConsumerSerivce {
+public class KafkaConsumerService {
 
     @KafkaListener(topics = "my-topic", groupId = "my-group")
     public void consumeMessage(ConsumerRecord<String, String> record){
