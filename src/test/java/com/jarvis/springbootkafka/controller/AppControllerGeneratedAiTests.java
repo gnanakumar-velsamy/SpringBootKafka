@@ -1,0 +1,43 @@
+package com.jarvis.springbootkafka.controller;
+
+import static org.assertj.core.api.Assertions.assertThatThrownBy;
+import static org.assertj.core.api.Assertions.assertThat;
+
+import org.junit.jupiter.api.AfterAll;
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.BeforeAll;
+import static org.junit.jupiter.api.Assertions.assertThrows;
+import org.junit.jupiter.api.extension.ExtendWith;
+
+import org.mockito.junit.jupiter.MockitoExtension;
+import org.mockito.Mockito;
+import static org.mockito.Mockito.mock;
+
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+import org.mockito.InjectMocks;
+import org.mockito.Mock;
+import org.mockito.MockitoAnnotations;
+
+class AppControllerGeneratedAiTests {
+    @InjectMocks
+    private AppController appController;
+
+    @Mock
+    private KafkaProducerService kafkaProducerService;
+
+    @BeforeEach
+    void setUp() {
+        MockitoAnnotations.openMocks(this);
+    }
+
+    @Test
+    void sendMessage_shouldCallKafkaProducerServiceSendMethod() {
+        // GIVEN
+        String message = "test message";
+        // WHEN
+        appController.sendMessage(message);
+        // THEN
+        Mockito.verify(kafkaProducerService, Mockito.times(1)).send(message);
+    }
+}
